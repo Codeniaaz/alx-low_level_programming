@@ -2,8 +2,13 @@
 #include <time.h>
 /* more headers goes there */
 #include <stdio.h>
-/* main - entry point.Return 0 always (success)*/
-int main(void);
+/* betty style doc for function main goes there */
+/**
+ * main - main function
+ *
+ * Return: Always 0 (success)
+*/
+int main(void)
 {
 	int n;
 
