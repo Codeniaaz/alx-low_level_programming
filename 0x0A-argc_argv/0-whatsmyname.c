@@ -2,6 +2,7 @@
 /**
  *main - entry point
  *@argv: a string
+ *@argc: count
  *Return: 0 (success)
  */
 
