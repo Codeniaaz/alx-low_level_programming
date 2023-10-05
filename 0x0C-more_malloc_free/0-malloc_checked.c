@@ -4,6 +4,7 @@
 /**
  *malloc_checked -  function that allocates memory using malloc.
  *@b: an integer that has the specific memory to be allocated
+ *Return: always success
  */
 void *malloc_checked(unsigned int b)
 {
@@ -12,7 +13,7 @@ void *malloc_checked(unsigned int b)
 	ptr = malloc(b);
 	if (ptr == NULL)
 	{
-		exit (98);
+		exit(98);
 	}
 	else
 	{
