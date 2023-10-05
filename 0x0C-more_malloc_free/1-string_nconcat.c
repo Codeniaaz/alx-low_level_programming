@@ -29,17 +29,23 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	combined = malloc((len_1 + len_2 + 1) * sizeof(char));
 	if (combined == NULL)
-	{
 		return (NULL);
-	}
 
 	for (i = 0; i < len_1; i++)
-	{
 		combined[i] = s1[i];
-	}
-	for (j = 0; j < n; j++)
+	if (n >= len_2)
 	{
-		combined[i + j] = s2[j];
+		for (j = 0; j < len_2; j++)
+		{
+			combined[i + j] = s2[j];
+		}
+	}
+	else
+	{
+		for (j = 0; j < n; j++)
+		{
+			combined[i + j] = s2[j];
+		}
 	}
 
 	combined[i + j] = '\0';
