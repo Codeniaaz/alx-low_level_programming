@@ -27,7 +27,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		len_2++;
 	}
 
-	combined = malloc((len_1 + len_2 + 1) * sizeof(char));
+	combined = malloc((len_1 + n + 1) * sizeof(char));
 	if (combined == NULL)
 		return (NULL);
 
