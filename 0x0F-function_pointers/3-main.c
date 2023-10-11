@@ -29,6 +29,12 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(99);
 	}
+	if ((*operator == '/' && num2 == 0)
+		|| (*operator == '%' && num2 == 0))
+	{
+		printf("Error\n");
+		exit(100);
+	}
 
 	result = get_op_func(operator)(num1, num2);
 	printf("%d\n", result);
