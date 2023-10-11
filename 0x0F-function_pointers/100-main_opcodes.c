@@ -37,12 +37,13 @@ void printOpCodes(int numBytes)
 {
 	int i;
 
-	int (*mainFuncPtr)(int, char **) = main;
-	unsigned char *functionPtr = (unsigned char *)mainFuncPtr;
+	unsigned char *functionPtr = (unsigned char *)main;
 
 	for (i = 0; i < numBytes; i++)
 	{
-		printf("%02hhx ", functionPtr[i]);
+		if (i == numBytes - 1)
+			printf("%02hhx\n", functionPtr[i]);
+		else
+			printf("%02hhx ", functionPtr[i]);
 	}
-	printf("\n");
 }
