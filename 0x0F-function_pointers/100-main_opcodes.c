@@ -37,7 +37,7 @@ void printOpCodes(int numBytes)
 {
 	int i;
 
-	unsigned char *functionPtr = (unsigned char *)printOpCodes;
+	unsigned char *functionPtr = (unsigned char *)main;
 
 	for (i = 0; i < numBytes; i++)
 	{
