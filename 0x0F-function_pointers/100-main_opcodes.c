@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void printOpCodes(void);
+void printOpCodes(int);
 
 /**
  * main - entry point
@@ -25,20 +25,21 @@ int main(int argc, char *argv[])
 		return (2);
 	}
 
-	printOpCodes();
+	printOpCodes(numBytes);
 	return (0);
 }
 
 /**
  * printOpCodes - prints the opcodes of its own main function.
+ * @numBytes: no of bytes
  */
-void printOpCodes(void)
+void printOpCodes(int numBytes)
 {
 	int i;
 
 	unsigned char *functionPtr = (unsigned char *)printOpCodes;
 
-	for (i = 0; i < 10; i++)
+	for (i = 0; i < numBytes; i++)
 	{
 		printf("%02x ", functionPtr[i]);
 	}
