@@ -2,7 +2,7 @@
 
 /**
  *free_list -  function that frees a list_t list.
- *@haed: head
+ *@head: head
  */
 void free_list(list_t *head)
 {
