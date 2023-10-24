@@ -1,11 +1,6 @@
 #ifndef LISTS_H
 #define LISTS_H
 
-/***************************/
-#include <stdlib.h>
-#include <string.h>
-#include <stdio.h>
-
 /*****************************/
 /**
  * struct listint_s - singly linked list
@@ -21,7 +16,11 @@ typedef struct listint_s
 	struct listint_s *next;
 } listint_t;
 
-
+/***************************/
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <stddef.h>
 
 /****************************************/
 int _putchar(char c);
